@@ -106,5 +106,20 @@ namespace @interface
         {
             return 4;
         }
+        public int CompareTo(Shape other)
+        {
+            Rectangle temp = ((Rectangle)other);
+            if (!(temp is null))
+            {
+                if (this.Area() < temp.Area())
+                    return 1;
+                else if (this.Area() > temp.Area())
+                    return -1;
+                return 0;
+                throw new NotImplementedException();
+            }
+            else
+                throw new Exception("Что - то пошло не так.");
+        }
     }
 }

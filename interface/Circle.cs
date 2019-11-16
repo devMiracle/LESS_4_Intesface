@@ -142,5 +142,21 @@ namespace @interface
                 Console.WriteLine("Объект сериализован");
             }
         }
+
+        public int CompareTo(Shape other)
+        {
+            Circle temp = ((Circle)other);
+            if (!(temp is null))
+            {
+                if (this.Area() < temp.Area())
+                    return 1;
+                else if (this.Area() > temp.Area())
+                    return -1;
+                return 0;
+                throw new NotImplementedException();
+            }
+            else
+                throw new Exception("Что - то пошло не так.");
+        }
     }
 }

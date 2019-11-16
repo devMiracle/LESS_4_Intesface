@@ -1,7 +1,7 @@
 ﻿
 namespace @interface
 {
-    interface IShape
+    interface IShape : System.IComparable<Shape>
     {
         void Print();
         void Move(Direction direction);

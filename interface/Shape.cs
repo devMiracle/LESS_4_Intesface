@@ -44,7 +44,6 @@ namespace @interface
                 config = new Config(height, width);
             else
                 throw new Exception();
-
             lastPosX = position.Xpos;
             lastPosY = position.Ypos;
         }
